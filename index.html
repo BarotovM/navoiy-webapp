@@ -10,9 +10,29 @@
 <body>
 
 <h2>Navoiy Deals</h2>
-<p>Ayollar kiyimlari savdosi</p>
+<p>Ayollar kiyimlari</p>
 
-<button onclick="sendData()">Test buyurtma</button>
+<div class="products">
+    <div class="card">
+        <img src="https://via.placeholder.com/150">
+        <h3>Ayollar kurtkasi</h3>
+        <p>350 000 so‘m</p>
+        <button onclick="addToCart('Ayollar kurtkasi', 350000)">
+            Savatga qo‘shish
+        </button>
+    </div>
+
+    <div class="card">
+        <img src="https://via.placeholder.com/150">
+        <h3>Ayollar shim</h3>
+        <p>220 000 so‘m</p>
+        <button onclick="addToCart('Ayollar shim', 220000)">
+            Savatga qo‘shish
+        </button>
+    </div>
+</div>
+
+<button class="order" onclick="sendOrder()">Buyurtma berish</button>
 
 <script src="script.js"></script>
 </body>

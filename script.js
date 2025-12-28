@@ -1,9 +1,16 @@
 const tg = window.Telegram.WebApp;
 tg.expand();
 
-function sendData() {
+let cart = [];
+
+function addToCart(name, price) {
+    cart.push({ name, price });
+    alert(name + " savatga qo‘shildi");
+}
+
+function sendOrder() {
     tg.sendData(JSON.stringify({
-        status: "ok",
-        message: "Test buyurtma yuborildi"
+        action: "order",
+        items: cart
     }));
 }
